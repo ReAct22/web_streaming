@@ -1,2 +1,2 @@
-# web_steraming
+# web_streaming
 Project Web Anime Streaming
