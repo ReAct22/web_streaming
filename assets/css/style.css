@@ -207,7 +207,7 @@ body{
 }
 
 .page-item{
-    margin: 1%;
+    margin: 0.5%;
     border-radius: 3%;
 }
 
@@ -305,8 +305,123 @@ footer{
     font-size: 12px;
 }
 
+/* genre page */
+.container-genre{
+    padding: 1%;
+}
+
+.box-genre{
+    width: 15%;
+    padding: 5px 10px;
+    background-color: #4b525a;
+    border-radius: 5px;
+    color: #cccccc;
+    transition: 0.3s;
+    text-transform: capitalize;
+    float: left;
+    margin: 5px;
+}
+
+.box-genre:hover{
+    background-color: #feca57;
+    color: #343a40;
+}
+
+.recomended{
+    width: 100%;
+    height: auto;
+}
+
+.recomended .image-update{
+    width: 100px;
+    height: 150px;
+}
+
+.recomended .title-update, .recomended .desc-update{
+    width: 70%;
+}
+
+.recomended .title-update{
+    margin-top: 5%;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: unset;
+}
+
+/* anime list */
+.box-list{
+    width: 95%;
+    height: auto;
+    margin: 0 3%;
+}
+
+.box-list .container-ongoing{
+    width: 13%;
+}
+
+.page-active{
+    background-color: #feca57;
+    color: #343a40 !important;
+}
+
+/* movie */
+.title-movie{
+    float: left;
+    color: #fff;
+    width: 85%;
+    margin-top: 1%;
+    margin-left: 2%;
+    text-align: left;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.desc-movie{
+    margin-top: 1%;
+    float: left;
+    color: rgb(160, 160, 160);
+    width: 85%;
+    margin-left: 2%;
+    text-align: left;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+/* back to top */
+.back-top {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: inline-block;  
+    padding: 1em;
+    margin: 1em;
+    color: #343a40 !important;
+    font-weight: bolder;
+    background: #feca57;
+}
+
+.back-top:hover {
+    cursor: pointer;
+}
+/* --------------------------------------------------------------------------------- */
+
 @media screen and (min-width: 360px) and (max-width: 740px){
     .box-item{
         width: 100%;
+    }
+    .box-genre{
+        width: auto;
+    }
+    .recomended .image-update{
+        width: 80px;
+    }
+    .box-list .container-ongoing{
+        width: 45%;
+    }
+}
+
+@media screen and (min-width: 740px) and (max-width: 1280px){
+    .box-list .container-ongoing{
+        width: 30%;
     }
 }
