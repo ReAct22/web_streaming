@@ -70,7 +70,7 @@
                             <strong><h5>Movie</h5></strong>
                         </div>
                         <div class="container-genre" id="container-genre">
-                            <div class="box-item recomended">
+                            <div class="box-item recomended movie-container">
                                 <a href="#">
                                     <div class="image-update">
                                         <img src="assets/img/movie/103385.jpg" alt="ongoing" class="image-ongoing">
@@ -83,7 +83,7 @@
                                     An adaptation of the the Sixth Singularity, The Sacred Round Table Realm Camelot Singularity of Fate/Grand Order.
                                 </div>
                             </div>
-                            <div class="box-item recomended">
+                            <div class="box-item recomended movie-container">
                                 <a href="#">
                                     <div class="image-update">
                                         <img src="assets/img/movie/106947.jpg" alt="ongoing" class="image-ongoing">
@@ -96,7 +96,7 @@
                                     Tanjirou Kamado and his friends from the Demon Slayer Corps accompany Kyoujurou Rengoku, the Flame Hashira, to investigate a mysterious series of disappearances occurring inside a train. Little do they know that Enmu, one of the Twelve Kizuki, is also on board and has prepared a trap for them.
                                 </div>
                             </div>
-                            <div class="box-item recomended">
+                            <div class="box-item recomended movie-container">
                                 <a href="#">
                                     <div class="image-update">
                                         <img src="assets/img/movie/86916.jpg" alt="ongoing" class="image-ongoing">
@@ -149,5 +149,23 @@
         <footer>
             <i class="fa fa-copyright" aria-hidden="true"></i> Copyright Sutorimu - Anime Streaming Website
         </footer>
+        
+        <div class="back-top"><i class="fas fa-chevron-up"></i></div>
     </body>
+
+<script type="text/javascript">
+    var $backToTop = $(".back-top");
+    $backToTop.hide();
+    $(window).on('scroll', function() {
+        if ($(this).scrollTop() > 100) {
+        $backToTop.fadeIn();
+        } else {
+        $backToTop.fadeOut();
+        }
+    });
+
+    $backToTop.on('click', function(e) {
+        $("html, body").animate({scrollTop: 0}, 500);
+    });
+</script>
 </html>
