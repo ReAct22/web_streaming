@@ -420,7 +420,7 @@ footer{
 .container-sinopsis{
     width: 90%;
     margin: 2%;
-    height: 300px;
+    height: auto;
 }
 
 /* back to top */
@@ -472,6 +472,24 @@ footer{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+    }
+    .container-sinopsis{
+        width: 95%;
+        text-align: justify;
+    }
+    .video-stream{
+        height: 300px;
+    }
+    .desc-info{
+        width: 100%;
+    }
+    .recomended .image-info{
+        width: 50%;
+        height: 250px;
+        margin-left: 25%;
+    }
+    .recomended .title-info{
+        width: 100%;
     }
 }
 
