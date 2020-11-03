@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Genres - Sutorimu</title>
+        <title>Movies - Sutorimu</title>
 
         <!-- slick -->
         <link rel="stylesheet" type="text/css" href="assets/slick/slick.css"/>
@@ -70,7 +70,7 @@
                             <strong><h5>Movie</h5></strong>
                         </div>
                         <div class="container-genre" id="container-genre">
-                            <div class="box-item recomended movie-container">
+                            <!-- <div class="box-item recomended movie-container">
                                 <a href="#">
                                     <div class="image-update">
                                         <img src="assets/img/movie/103385.jpg" alt="ongoing" class="image-ongoing">
@@ -112,11 +112,11 @@
                                     <br>
                                     The protagonists of the story are witch duo Noel Niihashi and Ninny Spangcole. They are protection agents for Wing Bind (WB), an organization for dragon conservation and management. Their mission is to protect and manage the dragons within London on behalf of the people. 
                                 </div>
-                            </div>
-                            <ul class="pagination pagination-sm justify-content-center" style="clear: both;">
+                            </div> -->
+                            <!-- <ul class="pagination pagination-sm justify-content-center" style="clear: both;">
                                 <li class="page-item"><a class="page-link paging page-active" href="#">1</a></li>
                                 <li class="page-item"><a class="page-link paging" href="#">2</a></li>
-                            </ul>
+                            </ul> -->
                         </div>
                     </div>
                     <!-- end list genre -->
@@ -152,7 +152,34 @@
         
         <div class="back-top"><i class="fas fa-chevron-up"></i></div>
     </body>
-
+<script>
+    $(document).ready(function(){
+        $.getJSON("movie.json", function(data) {
+            var movie_data = '';
+            $.each(data, function(key, value){
+                movie_data += '<div class="box-item recomended movie-container">';
+                movie_data += '<a href="#">';
+                movie_data += '<div class="image-update">';
+                movie_data += '<img src="assets/img/movie/'+value.image+'" alt="ongoing" class="image-ongoing">';
+                movie_data += '<div class="rating"><i class="fas fa-star"></i> N/A</div>';
+                movie_data += '</div>';
+                movie_data += '<div class="title-movie">'+value.title+'</div>';
+                movie_data += '</a>';
+                movie_data += '<div class="desc-movie">';
+                movie_data += value.genre;
+                movie_data += value.sinopsis;
+                movie_data += '</div>';
+                movie_data += '</div>';
+            });
+            movie_data += '<ul class="pagination pagination-sm justify-content-center" style="clear: both;">';
+            movie_data += '<li class="page-item"><a class="page-link paging page-active" href="#">1</a></li>';
+            movie_data += '<li class="page-item"><a class="page-link paging" href="#">2</a></li>';
+            movie_data += '</ul>';
+            $('#container-genre').append(movie_data);
+        });
+    });
+</script>
+    
 <script type="text/javascript">
     var $backToTop = $(".back-top");
     $backToTop.hide();
